@@ -1,0 +1,26 @@
+.contenedor{
+    text-align: center;
+    background-color: rgb(248, 246, 238);
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 5px;
+    border: 1px solid #000;
+    padding: 1%;
+}
+
+.elemento{
+    background-color: darkgray;
+    margin-top: 20px;
+    border: 1px solid #000;
+    border-radius: 20px 20px 20px 20px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.elemento:hover{
+    background-color: dimgray;
+}

@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { VistasComponent } from './vistas/vistas.component';
+import { ListaComponent } from './lista/lista.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    VistasComponent
+    VistasComponent,
+    ListaComponent,
   ],
   imports: [
     BrowserModule,
@@ -19,4 +21,5 @@ import { VistasComponent } from './vistas/vistas.component';
   providers: [],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }
