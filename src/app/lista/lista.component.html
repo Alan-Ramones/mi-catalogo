@@ -2,9 +2,11 @@
     <div *ngFor='let auto of autos'>
         <div class = "elemento">
             <div>
-                <img src="assets/icono_consultar.png"
-                height="100px"
-                width="150px">
+                <button type="button" (click)="open(auto)">
+                    <img src="./assets/icono_consultar.png"
+                    height="70px"
+                    width="100px"/>
+                </button>
             </div>
 
             <div>

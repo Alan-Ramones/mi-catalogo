@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { AUTOMOVILES } from '../data';
 import { Automovil } from '../models';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { ModalComponent } from '../modal/modal.component';
 
 @Component({
   selector: 'app-lista',
@@ -10,11 +12,16 @@ import { Automovil } from '../models';
 export class ListaComponent implements OnInit {
 
   autos: Automovil[];
-
-  constructor() { }
+  
+  closeResult = '';
+  constructor(private modalService: NgbModal) { }
 
   ngOnInit(): void {
     this.autos = AUTOMOVILES;
   }
 
+  open(auto: Automovil){
+    const modalRef = this.modalService.open(ModalComponent, { centered: true });
+    modalRef.componentInstance.autoSeleccionado = auto;
+  }
 }
