@@ -2,7 +2,7 @@
     <div *ngFor='let auto of autos'>
         <div class = "elemento">
             <div>
-                <button type="button" (click)="open(auto)">
+                <button type="button" (click)="open(auto, content)">
                     <img src="./assets/icono_consultar.png"
                     height="70px"
                     width="100px"/>
@@ -15,3 +15,19 @@
         </div>
     </div>
 </div>
+
+<ng-template #content let-modal>
+    <div class="modal-header">
+        <h4 class="modal-title">Más Información</h4>
+      </div>
+      <div class="modal-body">
+        <p>Marca: {{autoSeleccionado.marca}}</p>
+        <p>Submarca: {{autoSeleccionado.submarca}}</p>
+        <p>Modelo: {{autoSeleccionado.modelo}}</p>
+        <p>Descripción: {{autoSeleccionado.descripcion}}</p>
+        <p>Fecha de Registro: {{autoSeleccionado.fecha_registro}}</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-light" (click)="modal.close()">Cerrar</button>
+      </div>
+  </ng-template>

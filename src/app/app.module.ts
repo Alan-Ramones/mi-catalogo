@@ -7,7 +7,6 @@ import { HeaderComponent } from './header/header.component';
 import { VistasComponent } from './vistas/vistas.component';
 import { ListaComponent } from './lista/lista.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { ModalComponent } from './modal/modal.component';
 
 @NgModule({
   declarations: [
@@ -15,15 +14,11 @@ import { ModalComponent } from './modal/modal.component';
     HeaderComponent,
     VistasComponent,
     ListaComponent,
-    ModalComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule
-  ],
-  entryComponents: [
-    ModalComponent,
   ],
   providers: [],
   bootstrap: [AppComponent]
