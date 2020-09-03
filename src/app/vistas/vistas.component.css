@@ -7,6 +7,10 @@
     margin-top: 5px;
 }
 
+.active{
+    background-color: rgb(252, 246, 225);
+}
+
 td {
     border: 1px solid #000;
     border-spacing: 0;
