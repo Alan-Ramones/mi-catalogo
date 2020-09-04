@@ -1,5 +1,5 @@
 <div class="contenedor">
-    <div *ngFor='let auto of autos'>
+    <div *ngFor='let auto of autos | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize'>
         <div class = "elemento">
             <div>
                 <button type="button" (click)="open(auto, content)">
@@ -14,6 +14,10 @@
             </div>
         </div>
     </div>
+    
+    <div class="d-flex justify-content-between p-2">
+        <ngb-pagination [collectionSize]="collectionSize" [(page)]="page" [pageSize]="pageSize"></ngb-pagination>
+      </div>
 </div>
 
 <ng-template #content let-modal>
@@ -21,11 +25,11 @@
         <h4 class="modal-title">Más Información</h4>
       </div>
       <div class="modal-body">
+        <p>ID: {{autoSeleccionado._id}}</p>
         <p>Marca: {{autoSeleccionado.marca}}</p>
         <p>Submarca: {{autoSeleccionado.submarca}}</p>
-        <p>Modelo: {{autoSeleccionado.modelo}}</p>
+        <p>Modelos: {{autoSeleccionado.modelos}}</p>
         <p>Descripción: {{autoSeleccionado.descripcion}}</p>
-        <p>Fecha de Registro: {{autoSeleccionado.fecha_registro}}</p>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-light" (click)="modal.close()">Cerrar</button>
